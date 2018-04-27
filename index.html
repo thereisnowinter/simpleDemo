@@ -19,17 +19,17 @@
 
 </html>
 <script type="text/javascript">
-$('.wrapper').on('click', function(event) {
-    event.stopPropagation()
-})
-$('#clickMe').on('click', function(event) {
-    if ($('#popover')[0].style.display === 'none') {
-        $('#popover').show()
-    } else {
-        $('#popover').hide()
-    }
-    $(document).one('click', function() {
-        $('#popover').hide()
+    $('.wrapper').on('click', function(event) {
+        event.stopPropagation()
     })
-})
+    $('#clickMe').on('click', function(event) {
+        if ($('#popover')[0].style.display === 'block') {
+            $('#popover').hide()
+        } else {
+            $('#popover').show()
+        }
+        $(document).one('click', function() {
+            $('#popover').hide()
+        })
+    })
 </script>
